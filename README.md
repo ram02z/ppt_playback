@@ -14,7 +14,7 @@ A command-line tool that utilises ffmpeg in order to overwrite narrated powerpoi
 python ppt_playback.py -d="absolute/path/to/dir/" N
 ```
 
-where N a speed value between [0.5, 100.0].
+where N is a speed value between [0.5, 100.0].
 
 For each powerpoint in the directory, a new powerpoint will be created unless the ``-o`` flag is used.
 
