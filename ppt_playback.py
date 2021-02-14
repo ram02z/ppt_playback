@@ -81,7 +81,8 @@ def playback_change(speed: float, init_dir: str, quiet: bool, overwrite: bool):
 
     for i in invalid_ppts:
         print(i)
-    print(f'Processed {parts}/{number_ppt} powerpoints')
+    if number_ppt:
+        print(f'Processed {parts}/{number_ppt} powerpoints')
 
 
 if __name__ == "__main__":
