@@ -10,7 +10,7 @@ A command-line tool that utilises ffmpeg in order to overwrite narrated powerpoi
 
 ## Usage
 
-```properties
+```python
 python ppt_playback.py -d="absolute/path/to/dir/" N
 ```
 
@@ -20,7 +20,7 @@ where N is the speed between [0.5, 100.0].
 
 The following message can be shown using the ``h`` or ``--help`` flag.
 
-```properties
+```console
 usage: ppt_playback.py [-h] [--quiet] [--overwrite] [--dir [DIR]] speed
 
 Change the playback speed of powerpoint narration
