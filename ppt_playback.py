@@ -87,7 +87,7 @@ def playback_change(speed: float, init_dir: str, quiet: bool, overwrite: bool):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Change the playback speed of powerpoint narration')
     parser.add_argument('speed', type=float, help='desired playback speed')
-    parser.add_argument('--quiet', '-q', help='surpress ffmpeg stdout messages', default=False, action='store_true')
+    parser.add_argument('--quiet', '-q', help='surpress FFmpeg stdout messages', default=False, action='store_true')
     parser.add_argument('--overwrite', '-o', help='overwrite the powerpoint', default=False, action='store_true')
     parser.add_argument('--dir', '-d', help='path to directory containing powerpoints', nargs='?', default=os.getcwd(), type=str)
     args = parser.parse_args()
