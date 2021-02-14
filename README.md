@@ -11,7 +11,7 @@ A command-line tool that utilises ffmpeg in order to overwrite narrated powerpoi
 ## Usage
 
 ```properties
-python ppt_playback.py N -d="absolute/path/to/dir/"
+python ppt_playback.py -d="absolute/path/to/dir/" N
 ```
 
 where N is the speed between [0.5, 100.0].
