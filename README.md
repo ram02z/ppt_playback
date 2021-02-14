@@ -16,7 +16,9 @@ python ppt_playback.py -d="absolute/path/to/dir/" N
 
 where N is the speed between [0.5, 100.0].
 
-*-d is an optional argument. see below.*
+New powerpoint for each powerpoint in the directory will created with a custom playback speed, unless ``-o`` flag used.
+
+*-d is an optional argument. defaults to current working directory.*
 
 The following message can be shown using the ``h`` or ``--help`` flag.
 
