@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#!/usr/bin/env python
 import os
 import zipfile
 import shutil
@@ -52,7 +51,8 @@ def playback_change(speed: float, init_dir: str, quiet: bool, overwrite: bool):
             os.rename(new_zip, base + '.pptx')
             shutil.rmtree(base, ignore_errors=True)
             continue
-        sort_audios = sorted(audio_files, key=lambda x: int(os.path.splitext(x)[0][5:]))  # Assumes that numbers are on the 6th char
+        # Assumes that numbers start on the 6th character
+        sort_audios = sorted(audio_files, key=lambda x: int(os.path.splitext(x)[0][5:]))
 
         # Loops around media directory, overwriting any audio files based on speed param
         for count, afile in enumerate(sort_audios, start=1):
@@ -98,6 +98,6 @@ if __name__ == "__main__":
         raise OSError("FFmpeg needs to be in your PATH")
     elif not os.path.isdir(args.dir):
         raise OSError("Specified path is not a directory")
-    elif not (0.5 <= args.speed <= 100.0):
+    elif not 0.5 <= args.speed <= 100.0:
         raise RuntimeError("Speed must be in the [0.5, 100.0] range")
     playback_change(args.speed, args.dir, args.quiet, args.overwrite)
